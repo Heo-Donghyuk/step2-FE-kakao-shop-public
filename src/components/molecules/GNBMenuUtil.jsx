@@ -28,7 +28,11 @@ const GNBMenuUtil = ({ className = "" }) => {
   return (
     <Box className={className}>
       <Link to={staticServerUri + "/cart"}>
-        <img alt="shopping cart" src="/cart.png" className="w-9 h-9" />
+        <img
+          alt="shopping cart"
+          src={staticServerUri + "/cart.png"}
+          className="w-9 h-9"
+        />
         {!!itemNum && itemNum > 0 && (
           <span className="absolute top-[24px] left-[22px] min-w-[17px] px-[5px] rounded-[17px] text-center text-[11px] text-white font-semibold bg-red-500">
             {itemNum}

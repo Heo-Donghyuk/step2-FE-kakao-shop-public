@@ -1,5 +1,7 @@
 import "../../styles/atoms/Photo.css";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const Photo = ({ className, src, alt }) => {
   /*
   picture 태그는 img보다 SEO에서 유리하다 
@@ -10,7 +12,11 @@ const Photo = ({ className, src, alt }) => {
   return (
     <picture className={className}>
       <source srcSet={src} />
-      <img src={src} alt={alt} className={`${className} photo-img`} />
+      <img
+        src={staticServerUri + src}
+        alt={alt}
+        className={`${className} photo-img`}
+      />
     </picture>
   );
 };

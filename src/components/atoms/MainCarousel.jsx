@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const MainCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -43,7 +45,7 @@ const MainCarousel = () => {
             } absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out`}
           >
             <img
-              src={image}
+              src={staticServerUri + image}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />

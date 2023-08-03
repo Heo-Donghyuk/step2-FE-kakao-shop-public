@@ -15,7 +15,7 @@ const GNB = () => {
           <Link to={staticServerUri + "/"} className="block">
             <img
               alt="kakao shop logo"
-              src="/logoKakao.png"
+              src={staticServerUri + "/logoKakao.png"}
               className="block w-27 h-8"
             />
           </Link>

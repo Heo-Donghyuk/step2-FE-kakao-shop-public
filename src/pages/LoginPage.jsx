@@ -9,7 +9,7 @@ const LoginPage = () => {
     <Container className="mx-auto pt-12">
       <Link to={staticServerUri + "/"}>
         <img
-          src="/logoKakaoText.png"
+          src={staticServerUri + "/logoKakaoText.png"}
           alt="logoKakaoText"
           className="w-30 h-11 mx-auto"
         />
