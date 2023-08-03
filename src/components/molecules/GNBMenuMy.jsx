@@ -18,9 +18,10 @@ const GNBMenuMy = ({ className = "" }) => {
           // 아래 두 줄은 시행착오...
           //dispatch(logout());
           //dispatch(setEmail());
-          logOut();
-          // 메인 페이지로 이동
-          window.location.href = staticServerUri + "/";
+          logOut().then(() => {
+            // 메인 페이지로 이동
+            window.location.href = staticServerUri + "/";
+          });
         }}
         className={"min-w-fit block pt-4 pb-3 px-2 leading-7 ml-2"}
       >

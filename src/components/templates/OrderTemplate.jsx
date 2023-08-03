@@ -237,8 +237,10 @@ const OrderTemplate = ({ data }) => {
                     alert(
                       "주문에 실패했습니다. 재로그인 후 다시 시도해 주십시오."
                     );
-                    logOut();
-                    navigate("/login");
+                    logOut().then(() => {
+                      navigate("/login");
+                    });
+
                     // 사용자 정보가 유실(header의 autorization)시
                     // /login 페이지로 이동
                     // 엉뚱한 상품 데이터가 들어왔을 경우 404 페이지

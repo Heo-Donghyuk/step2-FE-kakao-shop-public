@@ -3,7 +3,7 @@ import store from "../store";
 import {logout}  from "../store/slices/userSlice";
 
 // 로그아웃을 수행하는 함수 정의
-const logOut = () => {
+const logOut = async () => {
   // 리덕스 스토어 초기화
           // console.log(store.getState())
           // console.log(logout())
@@ -12,5 +12,7 @@ const logOut = () => {
   store.dispatch(logout());
   // 쿠키 초기화
   removeUserCookie();
+
+  return Promise.resolve();
 }
 export default logOut;
