@@ -2,8 +2,6 @@ import { comma } from "../../utils/convert";
 import Photo from "../atoms/Photo";
 import StarRating from "../atoms/StarRatinig";
 
-const staticServerUri = process.env.REACT_APP_PATH || "";
-
 const ProductInformationColumn = ({ product, className }) => {
   const { productName, price, image, starCount } = product;
   return (
@@ -14,7 +12,7 @@ const ProductInformationColumn = ({ product, className }) => {
             className="min-w-[430px] min-h-[430px] max-w-[430px] max-h-[430px]"
             // src={process.env.REACT_APP_API_URL + image}
             // 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
-            src={staticServerUri + image}
+            src={image}
             alt={productName}
           />
         </div>

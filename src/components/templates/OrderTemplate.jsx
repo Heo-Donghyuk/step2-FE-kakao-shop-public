@@ -58,7 +58,7 @@ const OrderTemplate = ({ data }) => {
                       className="w-[80px] h-[80px] border rounded-lg"
                       //src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
                       // 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
-                      src={`${staticServerUri}${item.id}.jpg`}
+                      src={`${staticServerUri}/images/${item.id}.jpg`}
                       alt=""
                     />
                     <div className="product-info">
