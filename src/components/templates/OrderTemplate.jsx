@@ -9,6 +9,8 @@ import ErrorTypo from "../atoms/ErrorTypo";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
 
 const staticServerUri = process.env.REACT_APP_PATH || "";
+const REACT_APP_API_URL =
+  "http://kakao-app-env.eba-kfsgeb74.ap-northeast-2.elasticbeanstalk.com";
 
 const OrderTemplate = ({ data }) => {
   const products = data?.data?.response?.products;
@@ -56,7 +58,9 @@ const OrderTemplate = ({ data }) => {
                   <div className="flex items-center gap-3 py-2" key={option.id}>
                     <img
                       className="w-[80px] h-[80px] border rounded-lg"
-                      src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
+                      // 배포시 환경변수 문제로 인해 API 주소는 임시로 하드코딩했다.
+                      //src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
+                      src={`${REACT_APP_API_URL}/images/${item.id}.jpg`}
                       alt=""
                     />
                     <div className="product-info">

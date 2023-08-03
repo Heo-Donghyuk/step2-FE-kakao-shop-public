@@ -2,6 +2,9 @@ import { comma } from "../../utils/convert";
 import Photo from "../atoms/Photo";
 import StarRating from "../atoms/StarRatinig";
 
+const REACT_APP_API_URL =
+  "http://kakao-app-env.eba-kfsgeb74.ap-northeast-2.elasticbeanstalk.com";
+
 const ProductInformationColumn = ({ product, className }) => {
   const { productName, price, image, starCount } = product;
   return (
@@ -10,7 +13,9 @@ const ProductInformationColumn = ({ product, className }) => {
         <div className="col flex-none">
           <Photo
             className="min-w-[430px] min-h-[430px] max-w-[430px] max-h-[430px]"
-            src={process.env.REACT_APP_API_URL + image}
+            // 배포시 환경변수 문제로 인해 API 주소는 임시로 하드코딩했다.
+            // src={process.env.REACT_APP_API_URL + image}
+            src={REACT_APP_API_URL + image}
             alt={productName}
           />
         </div>
