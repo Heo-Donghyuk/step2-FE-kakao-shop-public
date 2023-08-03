@@ -8,8 +8,6 @@ import Button from "./Button";
 import Photo from "./Photo";
 
 const staticServerUri = process.env.REACT_APP_PATH || "";
-const REACT_APP_API_URL =
-  "http://kakao-app-env.eba-kfsgeb74.ap-northeast-2.elasticbeanstalk.com";
 
 // 각 상품별 장바구니 항목
 // 여러 옵션이 저장될 수 있음
@@ -49,9 +47,9 @@ const CartItem = ({ item, onChange }) => {
       <div className="flex items-center  mb-3">
         <Photo
           className="w-20 h-20 rounded border border-neutral-200"
-          // 배포시 환경변수 문제로 인해 API 주소는 임시로 하드코딩했다.
           // src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
-          src={`${REACT_APP_API_URL}/images/${item.id}.jpg`}
+          // 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
+          src={`${staticServerUri}${item.id}.jpg`}
           alt={`${item.productName} image`}
         />
         <Link to={staticServerUri + `/product/${item.id}`}>

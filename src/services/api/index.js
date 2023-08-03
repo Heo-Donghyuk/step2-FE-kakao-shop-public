@@ -1,13 +1,15 @@
 import axios from 'axios'
 import { getUserCookie } from '../cookie';
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 export const instance = axios.create({
   // baseURL을 하드코딩 하는 것은 Bad code -> env 환경변수에 담아 이용
   // 왜? 1. 동적인 환경 관리(개발과 production 단계에서의 사용 api주소가 다를 수 있다.), 2. 보안, 3. 유지 보수 및 배포에 용이(소스코드 수정 없이 env만 수정)
   //baseURL: "http;//localhost:8080"
   //baseURL: process.env.REACT_APP_API_URL,
-  // 배포시 환경변수 문제로 인해 API 주소는 임시로 하드코딩했다.
-  baseURL: "http://kakao-app-env.eba-kfsgeb74.ap-northeast-2.elasticbeanstalk.com",
+  // 배포환경의 백엔드 요청을 이용하도록 수정
+  baseURL: staticServerUri + "/api",
   // 꼭 timeout 세팅을 해줘야 한다. 무한정 요청을 기다릴 수 없기 때문
   timeout: 1000 * 10,
   headers: {
