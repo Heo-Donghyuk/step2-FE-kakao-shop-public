@@ -11,7 +11,7 @@ const Photo = ({ className, src, alt }) => {
   */
   return (
     <picture className={className}>
-      <source srcSet={src} />
+      <source srcSet={staticServerUri + src} />
       <img
         src={staticServerUri + src}
         alt={alt}

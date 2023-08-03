@@ -246,7 +246,7 @@ const OrderTemplate = ({ data }) => {
                   onSuccess: (res) => {
                     const id = res.data.response.id;
                     alert("주문이 완료되었습니다.");
-                    navigate(`/order/complete/${id}`);
+                    navigate(staticServerUri + `/order/complete/${id}`);
                   },
                 });
               }}
