@@ -5,12 +5,14 @@ import GNBMenuUtil from "../molecules/GNBMenuUtil";
 import Box from "../atoms/Box";
 import GNBMenuList from "../molecules/GNBMenuList";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const GNB = () => {
   return (
     <div className="fixed inset-x-0 top-0 z-50 bg-white h-20 border-neutral-200 border-b-[1px]">
       <Container className="  flex w-320 h-20 m-auto px-7">
         <Box className="min-w-fit pt-7 mx-6">
-          <Link to={"/"} className="block">
+          <Link to={staticServerUri + "/"} className="block">
             <img
               alt="kakao shop logo"
               src="/logoKakao.png"

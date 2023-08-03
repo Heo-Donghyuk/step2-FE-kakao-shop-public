@@ -9,6 +9,8 @@ import { emailValidCheck, pwValidCheck } from "../../utils/validationCheck";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const LoginForm = () => {
   // 사용자 정보를 store에 저장 : dispatch를 사용하기 위해 useDispatch;
   const dispatch = useDispatch();
@@ -141,7 +143,10 @@ const LoginForm = () => {
       >
         로그인
       </Button>
-      <Link to={"/signup"} className=" inline-block my-6 mx-3 ml-[350px]">
+      <Link
+        to={staticServerUri + "/signup"}
+        className=" inline-block my-6 mx-3 ml-[350px]"
+      >
         회원가입
       </Link>
     </Container>

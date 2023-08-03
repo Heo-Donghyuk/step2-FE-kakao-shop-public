@@ -8,6 +8,8 @@ import Button from "../atoms/Button";
 import { BsCart2, BsFillHeartFill, BsXLg } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OptionColumn = ({ product }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const handleOnClickOption = (option) => {
@@ -228,7 +230,7 @@ const OptionColumn = ({ product }) => {
               }),
               {
                 onSuccess: () => {
-                  route("/order"); //장바구니에 담은 후 주문 페이지로 이동
+                  route(staticServerUri + "/order"); //장바구니에 담은 후 주문 페이지로 이동
                 },
                 onError: (error) => {
                   if (error.status === 401) alert("로그인이 필요합니다.");

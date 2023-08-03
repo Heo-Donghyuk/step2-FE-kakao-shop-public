@@ -13,6 +13,8 @@ import { updateCart } from "../../services/api/cart";
 import { BsCart } from "react-icons/bs";
 import Loader from "../atoms/Loader";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const CartList = ({ data, isLoading }) => {
   const route = useNavigate();
   const [cartItems, setCartItems] = useState([]);
@@ -161,7 +163,7 @@ const CartList = ({ data, isLoading }) => {
               </button>
               <button
                 className="w-[100px] mx-1 px-3 py-2 rounded bg-black"
-                onClick={() => route("/")}
+                onClick={() => route(staticServerUri + "/")}
               >
                 <span className="text-sm text-white">쇼핑하기 홈</span>
               </button>
@@ -196,7 +198,7 @@ const CartList = ({ data, isLoading }) => {
               onClick={() => {
                 // navigate to order page
                 // 주문 페이지로 이동
-                route("/order");
+                route(staticServerUri + "/order");
               }}
             >
               <span className="font-semibold text-lg">

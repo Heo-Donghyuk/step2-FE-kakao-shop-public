@@ -10,24 +10,27 @@ import OrderPage from "./pages/OrderPage";
 import RequiredAuthLayout from "./layouts/RequiredAuthLayout";
 import OrderCompletePage from "./pages/OrderCompletePage";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 function App() {
   return (
    <div className="App">
     <BrowserRouter>
       <Routes>
         {/* 단독 레이아웃 */}
-        <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/signup" element={<RegisterPage />}></Route>
+        <Route path = {staticServerUri + "/login"} element={<LoginPage />}></Route>
+        <Route path = {staticServerUri + "/signup"} element={<RegisterPage />}></Route>
         {/* 공통 레이아웃 */}
         <Route element ={<MainLayout/>} >
-          <Route exact path = "/" element = {<HomePage />}></Route>
-          <Route exact path = "/product/:id" element = {<ProductDetailPage />}></Route>
+          <Route exact path = {staticServerUri + "/"} element = {<HomePage />}></Route>
+          <Route exact path = {staticServerUri + "/product/:id"} element = {<ProductDetailPage />}></Route>
         </Route>
         {/* 사용자가 로그인 되었을 때만 접근 가능한 레이아웃 */}
         <Route element = {<RequiredAuthLayout />}>
-          <Route exact path = "/cart" element = {<CartPage />}></Route>
-          <Route exact path = "/order" element = {<OrderPage />}></Route>
-          <Route exact path = "/order/complete/:id" element = {<OrderCompletePage />}></Route>
+          <Route exact path = {staticServerUri + "/cart"} element = {<CartPage />}></Route>
+          <Route exact path = {staticServerUri + "/order"} element = {<OrderPage />}></Route>
+          <Route exact path = {staticServerUri + "/order"} element = {<OrderPage />}></Route>
+          <Route exact path = {staticServerUri + "/order/complete/:id"} element = {<OrderCompletePage />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

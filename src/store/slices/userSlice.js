@@ -2,6 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { login, register } from "../../services/api/user";
 import { setUserCookie } from "../../services/cookie";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 // 슬라이스를 만들때 주의할 점 : initial state를 꼭 만들어 줘야 한다
 const initialState = {
   email: null,
@@ -41,7 +43,7 @@ const userSlice = createSlice({
       state.token = tempToken;
       // add cookie - email, token 
       setUserCookie({email: tempEmail, token: tempToken})
-      window.location.href = "/"; // HomePage로 리디렉션
+      window.location.href = staticServerUri+"/"; // HomePage로 리디렉션
     });
     // Promise의ㅣ rejected(거부): 연산이 실패함
     builder.addCase(loginRequest.rejected, (state, action) => {
@@ -56,7 +58,7 @@ const userSlice = createSlice({
     });
     builder.addCase(registerRequest.fulfilled, (state, action) => {
       state.loading = false;
-      window.location.href = "/"; // HomePage로 리디렉션
+      window.location.href = staticServerUri+"/"; // HomePage로 리디렉션
       alert("회원가입이 완료되었습니다.")
     });
     builder.addCase(registerRequest.rejected, (state, action) => {

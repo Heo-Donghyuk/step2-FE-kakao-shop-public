@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const Footer = () => {
   return (
     <div className="border border-x-0 py-10">
       <div className="w-[840px] m-auto">
-        <Link to={"/"} className="inline-block">
+        <Link to={staticServerUri + "/"} className="inline-block">
           <img
             className="w-36 h-5"
             src="https://st.kakaocdn.net/commerce_ui/front-sp/real/20230721/104852/assets/images/order/pc/pc_foot_logo.png"

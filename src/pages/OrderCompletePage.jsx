@@ -3,6 +3,7 @@ import { getOrderFromId } from "../services/api/order";
 import { useParams } from "react-router-dom";
 import React, { Suspense } from "react";
 import Loader from "../components/atoms/Loader";
+import ErrorTypo from "../components/atoms/ErrorTypo";
 
 const OrderCompleteTemplate = React.lazy(() =>
   import("../components/templates/OrderCompleteTemplate")
@@ -18,7 +19,7 @@ const OrderCompletePage = () => {
       <OrderCompleteTemplate data={data} />
     </Suspense>
   ) : (
-    <span>에러가 발생했습니다.</span>
+    <ErrorTypo />
   );
 };
 export default OrderCompletePage;

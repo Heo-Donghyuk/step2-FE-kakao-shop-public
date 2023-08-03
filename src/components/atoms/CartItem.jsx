@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import Photo from "./Photo";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 // 각 상품별 장바구니 항목
 // 여러 옵션이 저장될 수 있음
 const CartItem = ({ item, onChange }) => {
@@ -48,7 +50,7 @@ const CartItem = ({ item, onChange }) => {
           src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
           alt={`${item.productName} image`}
         />
-        <Link to={`/product/${item.id}`}>
+        <Link to={staticServerUri + `/product/${item.id}`}>
           <h5 className="pl-3 font-semibold text-base tracking-tighter">
             {item.productName}
           </h5>

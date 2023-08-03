@@ -6,6 +6,8 @@ import { getUserCookie } from "../services/cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInfo } from "../store/slices/userSlice";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const RequiredAuthLayout = () => {
   const navigate = useNavigate();
   // 렌더링 될 때, 쿠키에 저장된 사용자 정보를 리덕스 스토어에 가져와서 저장
@@ -16,7 +18,7 @@ const RequiredAuthLayout = () => {
   useEffect(() => {
     if (!userInfo.token) {
       alert("로그인이 필요한 서비스입니다.");
-      navigate("/login");
+      navigate(staticServerUri + "/login");
     }
   }, [navigate, userInfo.token]);
 

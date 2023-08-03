@@ -8,6 +8,8 @@ import { BsTruck } from "react-icons/bs";
 import ErrorTypo from "../atoms/ErrorTypo";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OrderTemplate = ({ data }) => {
   const products = data?.data?.response?.products;
   const totalPrice = data?.data?.response?.totalPrice;
@@ -109,7 +111,7 @@ const OrderTemplate = ({ data }) => {
                 </button>
                 <button
                   className="w-[100px] mx-2 px-3 py-2 rounded bg-black"
-                  onClick={() => route("/")}
+                  onClick={() => route(staticServerUri + "/")}
                 >
                   <span className="text-sm text-white">쇼핑하기 홈</span>
                 </button>

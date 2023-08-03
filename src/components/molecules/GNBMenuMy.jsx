@@ -4,6 +4,8 @@ import Button from "../atoms/Button";
 import { useSelector } from "react-redux";
 import logOut from "../../services/logout";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const GNBMenuMy = ({ className = "" }) => {
   const userInfo = useSelector((state) => state.user);
   // console.log("userinfo: ", userInfo);
@@ -18,7 +20,7 @@ const GNBMenuMy = ({ className = "" }) => {
           //dispatch(setEmail());
           logOut();
           // 메인 페이지로 이동
-          window.location.href = "/";
+          window.location.href = staticServerUri + "/";
         }}
         className={"min-w-fit block pt-4 pb-3 px-2 leading-7 ml-2"}
       >
@@ -27,11 +29,17 @@ const GNBMenuMy = ({ className = "" }) => {
     </Box>
   ) : (
     <Box className={className}>
-      <Link to={"/login"} className="block pt-4 pb-3 px-3 leading-7">
+      <Link
+        to={staticServerUri + "/login"}
+        className="block pt-4 pb-3 px-3 leading-7"
+      >
         로그인
       </Link>
       <span className="after:absolute after:right-auto after:top-9 after:w-px after:h-3 after:bg-gray-400 after:inline-block" />
-      <Link to={"/signup"} className="block pt-4 pb-3 px-3 leading-7">
+      <Link
+        to={staticServerUri + "/signup"}
+        className="block pt-4 pb-3 px-3 leading-7"
+      >
         회원가입
       </Link>
     </Box>

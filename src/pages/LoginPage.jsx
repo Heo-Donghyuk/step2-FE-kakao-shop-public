@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import Container from "../components/atoms/Container";
 import LoginForm from "../components/organisms/LoginForm";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const LoginPage = () => {
   return (
     <Container className="mx-auto pt-12">
-      <Link to={"/"}>
+      <Link to={staticServerUri + "/"}>
         <img
           src="/logoKakaoText.png"
           alt="logoKakaoText"

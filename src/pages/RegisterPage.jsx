@@ -7,10 +7,12 @@ import { Link } from "react-router-dom";
 import Container from "../components/atoms/Container";
 import RegisterForm from "../components/organisms/RegisterForm";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const RegisterPage = () => {
   return (
     <Container className="mx-auto pt-12">
-      <Link to={"/"}>
+      <Link to={staticServerUri + "/"}>
         <img
           src="/logoKakaoText.png"
           alt="logoKakaoText"

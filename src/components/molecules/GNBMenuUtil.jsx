@@ -5,6 +5,7 @@ import { getCart } from "../../services/api/cart";
 import { useState } from "react";
 import { useEffect } from "react";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
 // 검색, 배송정보, 장바구니
 // 장바구니 이미지로만 임시 구현
 const GNBMenuUtil = ({ className = "" }) => {
@@ -26,7 +27,7 @@ const GNBMenuUtil = ({ className = "" }) => {
 
   return (
     <Box className={className}>
-      <Link to="/cart">
+      <Link to={staticServerUri + "/cart"}>
         <img alt="shopping cart" src="/cart.png" className="w-9 h-9" />
         {!!itemNum && itemNum > 0 && (
           <span className="absolute top-[24px] left-[22px] min-w-[17px] px-[5px] rounded-[17px] text-center text-[11px] text-white font-semibold bg-red-500">
