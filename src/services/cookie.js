@@ -31,6 +31,7 @@ export const getUserCookie = () => {
 
 // 저장된 쿠키를 삭제하는 함수
 export const removeUserCookie = () => {
+  console.log("removeUserCookie")
   cookies.remove("email");
   cookies.remove("token");
 }

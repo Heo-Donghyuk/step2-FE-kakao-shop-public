@@ -12,6 +12,7 @@ const logOut = async () => {
   store.dispatch(logout());
   // 쿠키 초기화
   removeUserCookie();
+  console.log("logOut")
 
   return Promise.resolve();
 }
