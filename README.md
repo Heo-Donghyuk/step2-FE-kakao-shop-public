@@ -7,9 +7,11 @@
 
 ## 배포 주소
 
-- 카카오 크램폴린을 통해 배포한 링크입니다. - 2023년 8월 18일 이후 만료 예정
-- [https://user-app.krampoline.com/k0980975a1c79a](https://user-app.krampoline.com/k0980975a1c79a)
-- 추후 다른 플랫폼으로 배포를 진행할 예정입니다.
+- ~~카카오 크램폴린을 통해 배포한 링크입니다. - 2023년 8월 18일 이후 만료 예정~~
+- ~~[https://user-app.krampoline.com/k0980975a1c79a](https://user-app.krampoline.com/k0980975a1c79a)~~
+- 추후 다른 플랫폼으로 배포를 진행할 예정입니다. -> Netlify를 통한 배포 완료
+- Netlify를 통해 새롭게 배포한 링크입니다
+- [https://kakao-shop-hyuk.netlify.app/](https://kakao-shop-hyuk.netlify.app/)
 
 ## 프로젝트 소개
 
@@ -20,7 +22,8 @@
 ## 시작하기
 
 - 레포지토리 클론 후 프로젝트를 실행해 볼 수 있습니다.
-  - main 브랜치는 배포를 위한 설정이 되어있어 로컬에서 실행시 `feat-HeoDongHyuk` 브랜치의 프로젝트를 실행하는 것을 권장합니다.
+  - ~~main 브랜치는 배포를 위한 설정이 되어있어 로컬에서 실행시 `feat-HeoDongHyuk` 브랜치의 프로젝트를 실행하는 것을 권장합니다.~~
+  - main 브랜치 수정 완료 및 배포 브랜치 분기 완료로 로컬에서 실행 시 main 브랜치의 프로젝트 실행을 권장
 
 ### 요구사항
 
@@ -31,7 +34,7 @@
      ```markdown
      git clone https://github.com/Heo-Donghyuk/step2-FE-kakao-shop-public.git
      ```
-   - `feat-HeoDongHyuk` 브랜치 클론 - (권장)
+   - ~~`feat-HeoDongHyuk` 브랜치 클론 - (권장)~~
      ```markdown
      git clone -b feat-HeoDongHyuk https://github.com/Heo-Donghyuk/step2-FE-kakao-shop-public.git
      ```
@@ -70,31 +73,31 @@
 
 ### 메인 페이지
 
-![Untitled](https://file.notion.so/f/s/06933f6c-8761-4788-aa47-1204c5d6db81/Untitled.png?id=0bf5fdc8-fac5-48d0-8e6a-fdc3357107dc&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=VsH56eNoZXlOxX8W5Myhd8Njbthk2DfNbnh2Y0AXmZI&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/06933f6c-8761-4788-aa47-1204c5d6db81/Untitled.png?id=0bf5fdc8-fac5-48d0-8e6a-fdc3357107dc&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=YziQ3QTCQUEeHssrDemuL3wDgDnjnmplJjgC9hrPmnE&downloadName=Untitled.png)
 
 ### 회원가입 페이지
 
-![Untitled](https://file.notion.so/f/s/a6d56091-bdd0-4773-b7e2-85a4207228d5/Untitled.png?id=dd98c5f1-4101-41c7-9790-35bd486be627&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=89KPsS4w-tUNjAWcLAxGXcaS_efJYCeWqJC2DPAG_ZQ&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/a6d56091-bdd0-4773-b7e2-85a4207228d5/Untitled.png?id=dd98c5f1-4101-41c7-9790-35bd486be627&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=UdlJbWIGjfzKgCo4MwXxh9zrySvO2HPKpn_A-XX2LTg&downloadName=Untitled.png)
 
 ### 로그인 페이지
 
-![Untitled](https://file.notion.so/f/s/40f404ed-5d6e-450d-85e2-439eb4cae2c9/Untitled.png?id=7030cbea-cebb-4fb3-a0b8-58871d79a1ca&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=JYeAiytXHh1d42qSW8sgWMIYI44VZwu7A26QmQAcHSk&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/40f404ed-5d6e-450d-85e2-439eb4cae2c9/Untitled.png?id=7030cbea-cebb-4fb3-a0b8-58871d79a1ca&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=7O5W8aoV30tce85zLFU5suNRUis9gnZZSP0Miv4Hs_Y&downloadName=Untitled.png)
 
 ### 상품 상세 페이지
 
-![Untitled](https://file.notion.so/f/s/29c9f495-1543-4329-b9c2-eb3a597c55a1/Untitled.png?id=d7498ec7-6e4c-444e-8cd6-ff88d2bd076a&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=ySQwFaWLD1cqeD_fy7qO0lsEeEs4Z37_7P3khdskGv8&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/29c9f495-1543-4329-b9c2-eb3a597c55a1/Untitled.png?id=d7498ec7-6e4c-444e-8cd6-ff88d2bd076a&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=dHJ7J-0A54CChMwgmfjdqe-fSPkEudIdMEyW4DCGv04&downloadName=Untitled.png)
 
 ### 장바구니 페이지
 
-![Untitled](https://file.notion.so/f/s/31e63d14-3d19-4a22-b67f-531d053a00eb/Untitled.png?id=43decd95-0e46-4700-910b-51e0043ec9ca&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=eVgjLEL172K83aBid5YmFJxIwt2I_nakUu2UYhbaoWY&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/31e63d14-3d19-4a22-b67f-531d053a00eb/Untitled.png?id=43decd95-0e46-4700-910b-51e0043ec9ca&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=8V030BLvogJ8saSs9uPCGjCyqNUISYlWppO7GsenPh4&downloadName=Untitled.png)
 
 ### 주문하기 페이지
 
-![Untitled](https://file.notion.so/f/s/870b1638-1051-4f8e-8960-3225766b6b94/Untitled.png?id=33c15e57-97c2-4aef-a996-0ed7affff45d&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=QAxTErH4LQLNnRA9tNSy-qpxNJbyH-MYUlG08Dzvcws&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/870b1638-1051-4f8e-8960-3225766b6b94/Untitled.png?id=33c15e57-97c2-4aef-a996-0ed7affff45d&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=iWUaGdJbWvXMUdDWUh8DdrY9FKrXrrZaDNhfXVrE7cY&downloadName=Untitled.png)
 
 ### 주문 완료 페이지
 
-![Untitled](https://file.notion.so/f/s/01631df5-4901-4073-85a3-8a98434b231f/Untitled.png?id=5faaa966-eccd-40bd-bf84-f695af01905a&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1691229600000&signature=VliEeFcyK7TnFrspHhWqP5St2iBVdOdnfa6QzXScE2M&downloadName=Untitled.png)
+![Untitled](https://file.notion.so/f/s/01631df5-4901-4073-85a3-8a98434b231f/Untitled.png?id=5faaa966-eccd-40bd-bf84-f695af01905a&table=block&spaceId=82f8aff0-6275-4605-b926-789cc0824552&expirationTimestamp=1692295200000&signature=mSNf920ZliTptIL53CnEjOMnoVW3i22NMiWKF2aQZaM&downloadName=Untitled.png)
 
 </details>
 
@@ -167,11 +170,13 @@
 
 ### 배포 환경
 
-- 배포는 카카오 크램폴린 서비스에서 진행되었습니다.
-- 크램폴린 배포 가이드 PDF
+- 배포는 Netlify에서 진행했습니다.
+
+- ~~배포는 카카오 크램폴린 서비스에서 진행되었습니다.~~ - 2023년 8월 18일 만료
+- ~~크램폴린 배포 가이드 PDF~~
   [](https://file.notion.so/f/s/ea1fce0a-981b-4db5-8aa2-2f0578ea0453/크램폴린_배포_가이드.pdf?id=d903febb-cad5-4bbd-a234-1badbb3fd094&table=block&spaceId=3ef8dbd9-414c-4cf5-813d-32ecb943cc67&expirationTimestamp=1691071200000&signature=zsjoglnNpdIffM6M3yAafGmb2IO5G1zimsdbEDfVQxg&downloadName=크램폴린+배포+가이드.pdf)
 
-### 배포 순서 및 주의사항
+### 배포 순서 및 주의사항 - 카카오 크램폴린 배포 환경
 
 <details>
 <summary>접기/펴기</summary>
@@ -302,10 +307,10 @@
 
 ## 추후 수정 예정 사항
 
-- 배포 환경에서 로그아웃이 정상적으로 작동하지 않는 문제
-- 카카오 크램폴린 링크 만료 후 다른 플랫폼에서 배포
-- 배포를 위한 브랜치 생성하여 배포는 해당 브랜치로 수행
-- 현재 main 브랜치는 배포를 위해 static path가 수정되어있는데 이를 수정할 예정이다.
+- ~~배포 환경에서 로그아웃이 정상적으로 작동하지 않는 문제~~ - 해결
+- ~~카카오 크램폴린 링크 만료 후 다른 플랫폼에서 배포~~ - Netlify에서 배포 완료
+- ~~배포를 위한 브랜치 생성하여 배포는 해당 브랜치로 수행~~ - netlify-deploy, krampoline-deploy 브랜치 생성 및 코드 수정 완료
+- ~~현재 main 브랜치는 배포를 위해 static path가 수정되어있는데 이를 수정할 예정이다.~~ - 로컬에서 설치하여 바로 실행할 수 있도록 코드 수정 완료
 
 ## 주차별 과제 내용
 
