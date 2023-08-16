@@ -47,9 +47,10 @@ const CartItem = ({ item, onChange }) => {
       <div className="flex items-center  mb-3">
         <Photo
           className="w-20 h-20 rounded border border-neutral-200"
-          // src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
-          // 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
-          src={`/images/${item.id}.jpg`}
+          src={`${process.env.REACT_APP_API_URL}/images/${item.id}.jpg`}
+          // 아래는 크램폴린 배포 환경에서 이용한 src
+          // 크램폴린 배포 서버에서 api로 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
+          // src={`/images/${item.id}.jpg`}
           alt={`${item.productName} image`}
         />
         <Link to={staticServerUri + `/product/${item.id}`}>

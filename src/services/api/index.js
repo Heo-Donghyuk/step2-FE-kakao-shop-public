@@ -1,15 +1,14 @@
 import axios from 'axios'
 import { getUserCookie } from '../cookie';
 
-const staticServerUri = process.env.REACT_APP_PATH || "";
+//const staticServerUri = process.env.REACT_APP_PATH || ""; //배포환경의 백엔드 api 서버(크램폴린 환경)
 
 export const instance = axios.create({
   // baseURL을 하드코딩 하는 것은 Bad code -> env 환경변수에 담아 이용
   // 왜? 1. 동적인 환경 관리(개발과 production 단계에서의 사용 api주소가 다를 수 있다.), 2. 보안, 3. 유지 보수 및 배포에 용이(소스코드 수정 없이 env만 수정)
-  //baseURL: "http;//localhost:8080"
-  //baseURL: process.env.REACT_APP_API_URL,
-  // 배포환경의 백엔드 요청을 이용하도록 수정
-  baseURL: staticServerUri + "/api",
+  //baseURL: "http;//localhost:8080" // 로컬 api 서버
+  baseURL: process.env.REACT_APP_API_URL, // 환경변수 api 서버
+  //baseURL: staticServerUri + "/api", //배포환경의 백엔드 api 서버(크램폴린 환경)
   // 꼭 timeout 세팅을 해줘야 한다. 무한정 요청을 기다릴 수 없기 때문
   timeout: 1000 * 10,
   headers: {

@@ -10,9 +10,9 @@ const ProductInformationColumn = ({ product, className }) => {
         <div className="col flex-none">
           <Photo
             className="min-w-[430px] min-h-[430px] max-w-[430px] max-h-[430px]"
-            // src={process.env.REACT_APP_API_URL + image}
-            // 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
-            src={image}
+            src={process.env.REACT_APP_API_URL + image}
+            // 크램폴린 배포 서버에서 이미지를 제공해 주지않아 public 이미지를 이용하도록 수정
+            // src={image} // 크램폴린 배포용 src
             alt={productName}
           />
         </div>

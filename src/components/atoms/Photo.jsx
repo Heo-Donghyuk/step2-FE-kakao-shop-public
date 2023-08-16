@@ -1,6 +1,7 @@
 import "../../styles/atoms/Photo.css";
 
-const staticServerUri = process.env.REACT_APP_PATH || "";
+// 크램폴린 배포 환경에서 로컬 이미지 이용시 이용했던 코드
+//const staticServerUri = process.env.REACT_APP_PATH || "";
 
 const Photo = ({ className, src, alt }) => {
   /*
@@ -11,9 +12,10 @@ const Photo = ({ className, src, alt }) => {
   */
   return (
     <picture className={className}>
-      <source srcSet={staticServerUri + src} />
+      <source srcSet={src} />
       <img
-        src={staticServerUri + src}
+        src={src}
+        // src={staticServerUri + src} // 크램폴린 환경
         alt={alt}
         className={`${className} photo-img`}
       />
